@@ -7,7 +7,7 @@ publishDir = "docs"
 [params]
   defaultTheme = "auto"
   # Tu nombre en la home
-  author = "Adrián Laynez"
+  author = "Adrián Laynez Ortiz"
   # Descripción corta debajo de tu nombre
   homeInfoParams.Title = "Hello Attention 👋"
   homeInfoParams.Content = "Estudiante de Mates e Informática. Construyendo un GPT desde cero en C++."
@@ -21,3 +21,19 @@ publishDir = "docs"
     url = "https://linkedin.com/in/tu-usuario"  # Cámbialo cuando tengas
     [params.assets]
   disableFingerprinting = true
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "Proyectos"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Etiquetas"
+    url = "/tags/"
+    weight = 30
