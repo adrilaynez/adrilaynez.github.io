@@ -2,6 +2,7 @@ baseURL = 'https://adrianlaynez.dev/'
 languageCode = 'es'
 title = 'Hello Attention'
 theme = 'PaperMod'
+publishDir = "docs"
 
 [params]
   defaultTheme = "auto"
