@@ -19,3 +19,5 @@ publishDir = "docs"
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://linkedin.com/in/tu-usuario"  # Cámbialo cuando tengas
+    [params.assets]
+  disableFingerprinting = true
