@@ -1,0 +1,20 @@
+baseURL = 'https://adrianlaynez.dev/'
+languageCode = 'es'
+title = 'Hello Attention'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  # Tu nombre en la home
+  author = "Adrián Laynez"
+  # Descripción corta debajo de tu nombre
+  homeInfoParams.Title = "Hello Attention 👋"
+  homeInfoParams.Content = "Estudiante de Mates e Informática. Construyendo un GPT desde cero en C++."
+
+  # Enlaces a tus redes (GitHub, etc)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/adrilaynez"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/tu-usuario"  # Cámbialo cuando tengas
