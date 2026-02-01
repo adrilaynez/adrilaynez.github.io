@@ -1,45 +1,51 @@
-/* --- MAGIC GRID LAYOUT (FIXED) --- */
+/* --- MAGIC GRID LAYOUT (FINAL VERSION) --- */
 
-/* Aplicar Grid SOLO si es lista Y NO es la Home */
 @media screen and (min-width: 768px) {
-    body.list:not(.home) .main {
+
+    /* 1. Activamos el Grid en TODAS las listas */
+    body.list .main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Dos columnas */
+        /* Divide en dos columnas iguales */
         gap: 40px;
     }
 
-    /* Que el título y la paginación ocupen todo el ancho */
-    body.list:not(.home) .page-header,
-    body.list:not(.home) .pagination {
+    /* 2. EXCEPCIONES: Elementos que deben ocupar TODO el ancho (romper el grid) */
+    /* Esto arregla tu HOME (.profile) y los títulos de secciones (.page-header) */
+    body.list .page-header,
+    body.list .pagination,
+    body.list .profile {
+        /* <--- ESTA LÍNEA ES LA SOLUCIÓN */
         grid-column: 1 / -1;
+        /* "Ocupa desde la primera línea hasta la última" */
+        width: 100%;
+        /* Asegura que use todo el espacio */
     }
 }
 
-/* --- ESTILO DE LAS TARJETAS (Tier S Upgrade) --- */
-/* Esto responde a tu pregunta de "sugiéreme cosas" */
-
+/* --- ESTILO DE LAS TARJETAS (Tier S) --- */
 .post-entry {
     background: var(--entry);
-    /* Fondo sutil del tema */
     border-radius: 12px;
-    /* Bordes más suaves */
     padding: 15px;
-    /* Aire por dentro */
     border: 1px solid var(--border);
-    /* Borde fino elegante */
     transition: all 0.3s ease;
-    /* Animación suave */
+    height: 100%;
+    /* Para que todas las cajas midan lo mismo si el texto varía */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Efecto "Levitación" al pasar el ratón */
+/* Efecto "Levitación" */
 .post-entry:hover {
     transform: translateY(-5px);
-    /* Sube un poco */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    /* Sombra 3D */
     border-color: var(--primary);
-    /* El borde se ilumina */
+}
+
+/* El footer del post (fecha/tags) se pega al fondo */
+.entry-footer {
+    margin-top: auto;
 }
 
 /* --- DOMAR LAS FOTOS --- */
@@ -49,8 +55,12 @@
 
 .entry-cover img {
     height: 200px;
-    /* Altura un poco más compacta */
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.entry-cover img:hover {
+    transform: scale(1.02);
 }
