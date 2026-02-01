@@ -3,9 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adrianlaynez.dev/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/categories/</loc>
+    <loc>https://adrianlaynez.dev/tags/ai/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/tags/c&#43;&#43;/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/posts/hello-attention/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/posts/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianlaynez.dev/tags/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/tags/vision/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/categories/</loc>
   </url>
 </urlset>
