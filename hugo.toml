@@ -47,6 +47,11 @@ publishDir = "docs"
     name = "Projects"
     url = "/projects/"
     weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about me/"
+    weight = 40
 
 # SYNTAX HIGHLIGHTING (The "Tier S" Code Block Setup)
 # This mimics the look of an IDE like VS Code or CLion
