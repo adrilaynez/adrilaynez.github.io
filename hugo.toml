@@ -2,6 +2,7 @@ baseURL = 'https://adrianlaynez.dev/'
 languageCode = 'en-us' # English is the language of HFT/Systems
 title = 'Adrian Laynez'
 theme = 'PaperMod'
+publishDir = "docs"
 
 [params]
   defaultTheme = "dark" # Systems engineers usually prefer dark mode
