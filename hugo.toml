@@ -1,26 +1,40 @@
 baseURL = 'https://adrianlaynez.dev/'
-languageCode = 'es'
-title = 'Hello Attention'
+languageCode = 'en-us' # English is the language of HFT/Systems
+title = 'Adrian Laynez'
 theme = 'PaperMod'
-publishDir = "docs"
 
 [params]
-  defaultTheme = "auto"
-  # Tu nombre en la home
-  author = "Adrián Laynez Ortiz"
-  # Descripción corta debajo de tu nombre
-  homeInfoParams.Title = "Hello Attention 👋"
-  homeInfoParams.Content = "Estudiante de Mates e Informática. Construyendo un GPT desde cero en C++."
+  defaultTheme = "dark" # Systems engineers usually prefer dark mode
+  author = "Adrian Laynez Ortiz"
+  
+  # The Profile Mode (Your Homepage)
+  [params.profileMode]
+    enabled = true
+    title = "Adrian Laynez Ortiz"
+    subtitle = "Mathematics & Computer Science. Building a Deep Learning engine in C++/CUDA."
+    imageUrl = "https://github.com/adrilaynez.png" # Automatically pulls your GitHub avatar
+    imageWidth = 120
+    imageHeight = 120
+    
+    [[params.profileMode.buttons]]
+      name = "My Projects"
+      url = "/projects"
+    [[params.profileMode.buttons]]
+      name = "Technical Blog"
+      url = "/posts"
 
-  # Enlaces a tus redes (GitHub, etc)
+  # Social Icons (The most critical part for recruiters)
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/adrilaynez"
   [[params.socialIcons]]
     name = "linkedin"
-    url = "https://linkedin.com/in/tu-usuario"  # Cámbialo cuando tengas
-    [params.assets]
-  disableFingerprinting = true
+    url = "https://linkedin.com/in/tu-usuario"
+  [[params.socialIcons]]
+    name = "email"
+    url = "adrilaynezortiz@gmail.com"
+
+# The Navigation Menu
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -29,11 +43,16 @@ publishDir = "docs"
     weight = 10
   [[menu.main]]
     identifier = "projects"
-    name = "Proyectos"
+    name = "Projects"
     url = "/projects/"
     weight = 20
-  [[menu.main]]
-    identifier = "tags"
-    name = "Etiquetas"
-    url = "/tags/"
-    weight = 30
+
+# SYNTAX HIGHLIGHTING (The "Tier S" Code Block Setup)
+# This mimics the look of an IDE like VS Code or CLion
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "dracula" # or "monokai"
+    tabWidth = 4
