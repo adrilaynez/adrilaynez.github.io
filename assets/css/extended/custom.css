@@ -1,0 +1,42 @@
+/* --- MAGIC GRID LAYOUT --- */
+
+/* Solo aplicamos esto en las páginas de lista (Blog, Home) y no en los artículos sueltos */
+@media screen and (min-width: 768px) {
+    body.list .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        gap: 40px;
+        /* Espacio entre tarjetas */
+    }
+
+    /* Hacemos que el Título ("Posts") y la Paginación ocupen todo el ancho */
+    body.list .page-header,
+    body.list .pagination {
+        grid-column: 1 / -1;
+    }
+}
+
+/* --- DOMAR LAS FOTOS ENORMES --- */
+.entry-cover {
+    margin-bottom: 15px;
+    /* Separación con el texto */
+}
+
+.entry-cover img {
+    height: 220px;
+    /* Altura fija para todas (se acabó el caos) */
+    width: 100%;
+    /* Ancho completo de su columna */
+    object-fit: cover;
+    /* Recorta la imagen inteligentemente para que no se deforme */
+    border-radius: 8px;
+    /* Bordes redondeados modernos */
+    transition: transform 0.3s ease;
+    /* Efecto suave al pasar el ratón */
+}
+
+/* Efecto Zoom sutil al pasar el ratón (Toque "Tier S") */
+.entry-cover img:hover {
+    transform: scale(1.02);
+}
