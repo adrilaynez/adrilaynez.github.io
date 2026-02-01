@@ -1,42 +1,56 @@
-/* --- MAGIC GRID LAYOUT --- */
+/* --- MAGIC GRID LAYOUT (FIXED) --- */
 
-/* Solo aplicamos esto en las páginas de lista (Blog, Home) y no en los artículos sueltos */
+/* Aplicar Grid SOLO si es lista Y NO es la Home */
 @media screen and (min-width: 768px) {
-    body.list .main {
+    body.list:not(.home) .main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Dos columnas iguales */
+        /* Dos columnas */
         gap: 40px;
-        /* Espacio entre tarjetas */
     }
 
-    /* Hacemos que el Título ("Posts") y la Paginación ocupen todo el ancho */
-    body.list .page-header,
-    body.list .pagination {
+    /* Que el título y la paginación ocupen todo el ancho */
+    body.list:not(.home) .page-header,
+    body.list:not(.home) .pagination {
         grid-column: 1 / -1;
     }
 }
 
-/* --- DOMAR LAS FOTOS ENORMES --- */
+/* --- ESTILO DE LAS TARJETAS (Tier S Upgrade) --- */
+/* Esto responde a tu pregunta de "sugiéreme cosas" */
+
+.post-entry {
+    background: var(--entry);
+    /* Fondo sutil del tema */
+    border-radius: 12px;
+    /* Bordes más suaves */
+    padding: 15px;
+    /* Aire por dentro */
+    border: 1px solid var(--border);
+    /* Borde fino elegante */
+    transition: all 0.3s ease;
+    /* Animación suave */
+}
+
+/* Efecto "Levitación" al pasar el ratón */
+.post-entry:hover {
+    transform: translateY(-5px);
+    /* Sube un poco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra 3D */
+    border-color: var(--primary);
+    /* El borde se ilumina */
+}
+
+/* --- DOMAR LAS FOTOS --- */
 .entry-cover {
     margin-bottom: 15px;
-    /* Separación con el texto */
 }
 
 .entry-cover img {
-    height: 220px;
-    /* Altura fija para todas (se acabó el caos) */
+    height: 200px;
+    /* Altura un poco más compacta */
     width: 100%;
-    /* Ancho completo de su columna */
     object-fit: cover;
-    /* Recorta la imagen inteligentemente para que no se deforme */
     border-radius: 8px;
-    /* Bordes redondeados modernos */
-    transition: transform 0.3s ease;
-    /* Efecto suave al pasar el ratón */
-}
-
-/* Efecto Zoom sutil al pasar el ratón (Toque "Tier S") */
-.entry-cover img:hover {
-    transform: scale(1.02);
 }
