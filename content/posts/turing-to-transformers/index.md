@@ -1,6 +1,6 @@
 ---
 title: "From Turing to Transformers"
-date: 2026-02-15
+date: 2026-02-01
 categories: ["Concepts"]
 tags: ["History", "AI"]
 cover:

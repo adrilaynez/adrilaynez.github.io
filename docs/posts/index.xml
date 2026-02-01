@@ -9,11 +9,57 @@
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adrianlaynez.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>From Turing to Transformers</title>
+      <link>https://adrianlaynez.dev/posts/turing-to-transformers/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://adrianlaynez.dev/posts/turing-to-transformers/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Machines take me by surprise with great frequency.&amp;rdquo; - Alan Turing&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Before we had ChatGPT, we had the &lt;strong&gt;Perceptron&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-first-neuron&#34;&gt;The First Neuron&lt;/h3&gt;
+&lt;p&gt;In 1958, Frank Rosenblatt created the Perceptron. It wasn&amp;rsquo;t code; it was hardware. Cables connected potentiometers representing weights.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Perceptron Hardware&#34; loading=&#34;lazy&#34; src=&#34;https://upload.wikimedia.org/wikipedia/en/5/52/Mark_I_perceptron.jpeg&#34;&gt;
+&lt;em&gt;The Mark I Perceptron machine.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It failed to solve XOR, leading to the &amp;ldquo;AI Winter&amp;rdquo;. But the math survived.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Hello, Attention: Building a Deep Learning Engine from Zero</title>
       <link>https://adrianlaynez.dev/posts/hello-attention/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://adrianlaynez.dev/posts/hello-attention/</guid>
       <description>Why I am re-inventing the wheel by building a GPT engine in pure C++.</description>
+    </item>
+    <item>
+      <title>Optimizing Matrix Multiplication in CUDA</title>
+      <link>https://adrianlaynez.dev/posts/optimization-matrix/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://adrianlaynez.dev/posts/optimization-matrix/</guid>
+      <description>&lt;h2 id=&#34;the-bottleneck&#34;&gt;The Bottleneck&lt;/h2&gt;
+&lt;p&gt;Naive matrix multiplication is $O(N^3)$. In Python, &lt;code&gt;torch.matmul&lt;/code&gt; hides this complexity, but in C++, we face the raw memory latency.&lt;/p&gt;
+&lt;h3 id=&#34;the-code&#34;&gt;The Code&lt;/h3&gt;
+&lt;p&gt;Here is the naive implementation vs the tiled kernel:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// Naive implementation
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;__global__ &lt;span style=&#34;color:#8be9fd&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;matmul_naive&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd&#34;&gt;float&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; A, &lt;span style=&#34;color:#8be9fd&#34;&gt;float&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; B, &lt;span style=&#34;color:#8be9fd&#34;&gt;float&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; C, &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; N) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; row &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; blockIdx.y &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; blockDim.y &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; threadIdx.y;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; col &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; blockIdx.x &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; blockDim.x &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; threadIdx.x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;performance-analysis&#34;&gt;Performance Analysis&lt;/h3&gt;
+&lt;p&gt;![Benchmark Graph](&lt;a href=&#34;https://quickchart.io/chart?c=%7Btype:&#39;bar&#39;,data:%7Blabels:%5B&#39;CPU&#39;,&#39;Naive&#34;&gt;https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive&lt;/a&gt; GPU&amp;rsquo;,&amp;lsquo;Tiled GPU&amp;rsquo;],datasets:[{label:&amp;lsquo;Time (ms)&amp;rsquo;,data:[450,45,3]}]}})
+&lt;em&gt;As shown above, the Tiled approach is 15x faster.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

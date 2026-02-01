@@ -1,35 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Adrian Laynez</title>
-    <link>https://adrianlaynez.dev/</link>
-    <description>Recent content on Adrian Laynez</description>
+    <title>CUDA on Adrian Laynez</title>
+    <link>https://adrianlaynez.dev/tags/cuda/</link>
+    <description>Recent content in CUDA on Adrian Laynez</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianlaynez.dev/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>From Turing to Transformers</title>
-      <link>https://adrianlaynez.dev/posts/turing-to-transformers/</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/turing-to-transformers/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Machines take me by surprise with great frequency.&amp;rdquo; - Alan Turing&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Before we had ChatGPT, we had the &lt;strong&gt;Perceptron&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;the-first-neuron&#34;&gt;The First Neuron&lt;/h3&gt;
-&lt;p&gt;In 1958, Frank Rosenblatt created the Perceptron. It wasn&amp;rsquo;t code; it was hardware. Cables connected potentiometers representing weights.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Perceptron Hardware&#34; loading=&#34;lazy&#34; src=&#34;https://upload.wikimedia.org/wikipedia/en/5/52/Mark_I_perceptron.jpeg&#34;&gt;
-&lt;em&gt;The Mark I Perceptron machine.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;It failed to solve XOR, leading to the &amp;ldquo;AI Winter&amp;rdquo;. But the math survived.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello, Attention: Building a Deep Learning Engine from Zero</title>
-      <link>https://adrianlaynez.dev/posts/hello-attention/</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/hello-attention/</guid>
-      <description>Why I am re-inventing the wheel by building a GPT engine in pure C++.</description>
-    </item>
+    <atom:link href="https://adrianlaynez.dev/tags/cuda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimizing Matrix Multiplication in CUDA</title>
       <link>https://adrianlaynez.dev/posts/optimization-matrix/</link>
@@ -60,19 +38,6 @@
 &lt;h3 id=&#34;performance-analysis&#34;&gt;Performance Analysis&lt;/h3&gt;
 &lt;p&gt;![Benchmark Graph](&lt;a href=&#34;https://quickchart.io/chart?c=%7Btype:&#39;bar&#39;,data:%7Blabels:%5B&#39;CPU&#39;,&#39;Naive&#34;&gt;https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive&lt;/a&gt; GPU&amp;rsquo;,&amp;lsquo;Tiled GPU&amp;rsquo;],datasets:[{label:&amp;lsquo;Time (ms)&amp;rsquo;,data:[450,45,3]}]}})
 &lt;em&gt;As shown above, the Tiled approach is 15x faster.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About Me</title>
-      <link>https://adrianlaynez.dev/about-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/about-me/</guid>
-      <description>&lt;h2 id=&#34;the-mission&#34;&gt;The Mission&lt;/h2&gt;
-&lt;p&gt;I am a double-degree student in &lt;strong&gt;Mathematics and Computer Science&lt;/strong&gt;, currently strictly focused on &lt;strong&gt;Systems Engineering&lt;/strong&gt; and &lt;strong&gt;High-Performance Computing (HPC)&lt;/strong&gt; for AI.&lt;/p&gt;
-&lt;p&gt;My philosophy is simple:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Don&amp;rsquo;t just import it. Build it.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;While the industry rushes to use the latest frameworks, I am taking a step back to understand the machinery. I am building deep learning engines from scratch—starting with Python, moving to C++, and optimizing with CUDA kernels—to bridge the gap between abstract mathematics and bare-metal performance.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

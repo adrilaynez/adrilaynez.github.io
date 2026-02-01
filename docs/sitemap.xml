@@ -11,7 +11,31 @@
     <loc>https://adrianlaynez.dev/tags/c&#43;&#43;/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://adrianlaynez.dev/categories/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/categories/concepts/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/tags/cuda/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/categories/engineering/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/posts/turing-to-transformers/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://adrianlaynez.dev/posts/hello-attention/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/tags/history/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/posts/optimization-matrix/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianlaynez.dev/tags/performance/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianlaynez.dev/posts/</loc>
@@ -24,7 +48,5 @@
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianlaynez.dev/about-me/</loc>
-  </url><url>
-    <loc>https://adrianlaynez.dev/categories/</loc>
   </url>
 </urlset>

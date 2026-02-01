@@ -114,6 +114,26 @@
 </header>
 
 <article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="https://adrianlaynez.dev/turing.jpg" alt="Alan Turing at Bletchley Park">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">From Turing to Transformers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> “Machines take me by surprise with great frequency.” - Alan Turing
+Before we had ChatGPT, we had the Perceptron.
+The First Neuron In 1958, Frank Rosenblatt created the Perceptron. It wasn’t code; it was hardware. Cables connected potentiometers representing weights.
+The Mark I Perceptron machine.
+It failed to solve XOR, leading to the “AI Winter”. But the math survived.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-01 00:00:00 +0000 UTC'>February 1, 2026</span>&nbsp;·&nbsp;<span>Adrian Laynez Ortiz</span></footer>
+  <a class="entry-link" aria-label="post link to From Turing to Transformers" href="https://adrianlaynez.dev/posts/turing-to-transformers/"></a>
+</article>
+
+<article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">Hello, Attention: Building a Deep Learning Engine from Zero
     </h2>
@@ -123,6 +143,24 @@
   </div>
   <footer class="entry-footer"><span title='2026-02-01 00:00:00 +0000 UTC'>February 1, 2026</span>&nbsp;·&nbsp;<span>Adrian Laynez Ortiz</span></footer>
   <a class="entry-link" aria-label="post link to Hello, Attention: Building a Deep Learning Engine from Zero" href="https://adrianlaynez.dev/posts/hello-attention/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="https://adrianlaynez.dev/matrix.png" alt="Matrix Multiplication Tiling Visualization">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Optimizing Matrix Multiplication in CUDA
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Bottleneck Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C&#43;&#43;, we face the raw memory latency.
+The Code Here is the naive implementation vs the tiled kernel:
+1 2 3 4 5 6 // Naive implementation __global__ void matmul_naive(float* A, float* B, float* C, int N) { int row = blockIdx.y * blockDim.y &#43; threadIdx.y; int col = blockIdx.x * blockDim.x &#43; threadIdx.x; // ... } Performance Analysis ![Benchmark Graph](https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive GPU’,‘Tiled GPU’],datasets:[{label:‘Time (ms)’,data:[450,45,3]}]}}) As shown above, the Tiled approach is 15x faster.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-01 00:00:00 +0000 UTC'>February 1, 2026</span>&nbsp;·&nbsp;<span>Adrian Laynez Ortiz</span></footer>
+  <a class="entry-link" aria-label="post link to Optimizing Matrix Multiplication in CUDA" href="https://adrianlaynez.dev/posts/optimization-matrix/"></a>
 </article>
     </main>
     
