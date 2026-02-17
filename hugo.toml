@@ -48,6 +48,11 @@ publishDir = "docs"
     url = "/projects/"
     weight = 20
   [[menu.main]]
+    identifier = "lm-lab"
+    name = "LM-Lab"
+    url = "/projects/lm-lab/"
+    weight = 25
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about me/"
@@ -56,6 +61,8 @@ publishDir = "docs"
 # SYNTAX HIGHLIGHTING (The "Tier S" Code Block Setup)
 # This mimics the look of an IDE like VS Code or CLion
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     codeFences = true
     guessSyntax = true

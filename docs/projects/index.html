@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>CUDA | Adrian Laynez</title>
+<title>Projects | Adrian Laynez</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Projects - Adrian Laynez">
 <meta name="author" content="Adrian Laynez Ortiz">
-<link rel="canonical" href="http://localhost:1313/tags/cuda/">
+<link rel="canonical" href="http://localhost:1313/projects/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.e9277b006c5b6c7c3cb0bea9bbe6f1e1fc7031e938bbdeaab7bc2cb0a29b365c.css" integrity="sha256-6Sd7AGxbbHw8sL6pu&#43;bx4fxwMek4u96qt7wssKKbNlw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/cuda/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/cuda/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/projects/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,7 +72,7 @@
             </li>
             <li>
                 <a href="http://localhost:1313/projects/" title="Projects">
-                    <span>Projects</span>
+                    <span class="active">Projects</span>
                 </a>
             </li>
             <li>
@@ -91,26 +91,22 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    CUDA
+    Projects
   </h1>
 </header>
 
-<article class="post-entry tag-entry"> 
-<figure class="entry-cover">
-            <img loading="lazy" src="http://localhost:1313/posts/optimization-matrix/matrix.png" alt="Matrix Multiplication Tiling Visualization">
-</figure>
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Optimizing Matrix Multiplication in CUDA
+    <h2 class="entry-hint-parent">LM-Lab
     </h2>
   </header>
   <div class="entry-content">
-    <p>The Bottleneck Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C&#43;&#43;, we face the raw memory latency.
-The Code Here is the naive implementation vs the tiled kernel:
-1 2 3 4 5 6 // Naive implementation __global__ void matmul_naive(float* A, float* B, float* C, int N) { int row = blockIdx.y * blockDim.y &#43; threadIdx.y; int col = blockIdx.x * blockDim.x &#43; threadIdx.x; // ... } Performance Analysis ![Benchmark Graph](https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive GPU’,‘Tiled GPU’],datasets:[{label:‘Time (ms)’,data:[450,45,3]}]}}) As shown above, the Tiled approach is 15x faster.
-</p>
+    <p>LM-Lab: Interactive Language Model Exploration LM-Lab is an interactive laboratory for exploring and experimenting with language models. This application provides a hands-on interface to understand how modern language models process and generate text, visualize attention patterns, and analyze model behavior in real-time.
+Features Real-time Model Interactions: Test different language models directly in the browser Parameter Tuning: Adjust model parameters to see how they affect outputs Attention Visualization: Understand how models focus on different tokens Performance Metrics: Monitor inference time and resource utilization Model Information: View vocabulary sizes and parameter counts Training Data Statistics: Analyze the data used to train models Try It Now How to Use Select a Model: Choose from available language models in the sidebar Adjust Parameters: Fine-tune model parameters like temperature and max tokens Enter Your Input: Type text or select from examples Analyze Results: View model outputs, attention patterns, and statistics Experiment: Try different inputs to understand model behavior About This Project LM-Lab demonstrates the integration of advanced language models with modern web technologies. Built with Streamlit, it showcases practical applications of large language models in an accessible, interactive format. Perfect for researchers, students, and ML enthusiasts.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-02-01 00:00:00 +0000 UTC'>February 1, 2026</span>&nbsp;·&nbsp;<span>Adrian Laynez Ortiz</span></footer>
-  <a class="entry-link" aria-label="post link to Optimizing Matrix Multiplication in CUDA" href="http://localhost:1313/posts/optimization-matrix/"></a>
+  <footer class="entry-footer"><span title='2026-02-17 00:00:00 +0000 UTC'>February 17, 2026</span>&nbsp;·&nbsp;<span>Adrian Laynez Ortiz</span></footer>
+  <a class="entry-link" aria-label="post link to LM-Lab" href="http://localhost:1313/projects/lm-lab/"></a>
 </article>
     </main>
     

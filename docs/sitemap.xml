@@ -2,51 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adrianlaynez.dev/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/lm-lab/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/c&#43;&#43;/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/c&#43;&#43;/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/categories/</loc>
+    <loc>http://localhost:1313/categories/concepts/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/categories/concepts/</loc>
+    <loc>http://localhost:1313/tags/cuda/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/cuda/</loc>
+    <loc>http://localhost:1313/categories/engineering/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/categories/engineering/</loc>
+    <loc>http://localhost:1313/posts/turing-to-transformers/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/posts/turing-to-transformers/</loc>
+    <loc>http://localhost:1313/posts/hello-attention/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/posts/hello-attention/</loc>
+    <loc>http://localhost:1313/tags/history/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/history/</loc>
+    <loc>http://localhost:1313/posts/optimization-matrix/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/posts/optimization-matrix/</loc>
+    <loc>http://localhost:1313/tags/performance/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/performance/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/posts/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/</loc>
+    <loc>http://localhost:1313/tags/vision/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianlaynez.dev/tags/vision/</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adrianlaynez.dev/about-me/</loc>
+    <loc>http://localhost:1313/about-me/</loc>
   </url>
 </urlset>
