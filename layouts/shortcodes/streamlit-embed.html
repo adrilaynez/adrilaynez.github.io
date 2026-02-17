@@ -1,8 +1,8 @@
 {{- $url := .Get "url" -}}
 <div class="streamlit-embed-wrapper">
-    <iframe src="{{ $url }}?embedded=true" class="streamlit-embed-iframe"
+    <iframe src="{{ $url }}" class="streamlit-embed-iframe"
         allow="camera; microphone; clipboard-read; clipboard-write; geolocation" title="LM-Lab Streamlit Application"
-        loading="lazy">
+        loading="lazy" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation">
     </iframe>
 </div>
 
