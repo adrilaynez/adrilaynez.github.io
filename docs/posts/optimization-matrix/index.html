@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Optimizing Matrix Multiplication in CUDA | Adrian Laynez</title>
 <meta name="keywords" content="CUDA, C&#43;&#43;, Performance">
 <meta name="description" content="The Bottleneck
@@ -33,16 +33,16 @@ Performance Analysis
 ![Benchmark Graph](https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive GPU&rsquo;,&lsquo;Tiled GPU&rsquo;],datasets:[{label:&lsquo;Time (ms)&rsquo;,data:[450,45,3]}]}})
 As shown above, the Tiled approach is 15x faster.">
 <meta name="author" content="Adrian Laynez Ortiz">
-<link rel="canonical" href="http://localhost:1313/posts/optimization-matrix/">
+<link rel="canonical" href="https://adrianlaynez.dev/posts/optimization-matrix/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.e9277b006c5b6c7c3cb0bea9bbe6f1e1fc7031e938bbdeaab7bc2cb0a29b365c.css" integrity="sha256-6Sd7AGxbbHw8sL6pu&#43;bx4fxwMek4u96qt7wssKKbNlw=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://adrianlaynez.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://adrianlaynez.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://adrianlaynez.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://adrianlaynez.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://adrianlaynez.dev/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/optimization-matrix/">
+<link rel="alternate" hreflang="en" href="https://adrianlaynez.dev/posts/optimization-matrix/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,13 +57,110 @@ As shown above, the Tiled approach is 15x faster.">
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://adrianlaynez.dev/posts/optimization-matrix/">
+  <meta property="og:site_name" content="Adrian Laynez">
+  <meta property="og:title" content="Optimizing Matrix Multiplication in CUDA">
+  <meta property="og:description" content="The Bottleneck Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C&#43;&#43;, we face the raw memory latency.
+The Code Here is the naive implementation vs the tiled kernel:
+1 2 3 4 5 6 // Naive implementation __global__ void matmul_naive(float* A, float* B, float* C, int N) { int row = blockIdx.y * blockDim.y &#43; threadIdx.y; int col = blockIdx.x * blockDim.x &#43; threadIdx.x; // ... } Performance Analysis ![Benchmark Graph](https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive GPU’,‘Tiled GPU’],datasets:[{label:‘Time (ms)’,data:[450,45,3]}]}}) As shown above, the Tiled approach is 15x faster.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-01T00:00:00+00:00">
+    <meta property="article:tag" content="CUDA">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="Performance">
+    <meta property="og:image" content="https://adrianlaynez.dev/posts/optimization-matrix/matrix.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://adrianlaynez.dev/posts/optimization-matrix/matrix.png">
+<meta name="twitter:title" content="Optimizing Matrix Multiplication in CUDA">
+<meta name="twitter:description" content="The Bottleneck
+Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C&#43;&#43;, we face the raw memory latency.
+The Code
+Here is the naive implementation vs the tiled kernel:
+
+
+1
+2
+3
+4
+5
+6
+
+
+// Naive implementation
+__global__ void matmul_naive(float* A, float* B, float* C, int N) {
+    int row = blockIdx.y * blockDim.y &#43; threadIdx.y;
+    int col = blockIdx.x * blockDim.x &#43; threadIdx.x;
+    // ...
+}
+
+
+Performance Analysis
+![Benchmark Graph](https://quickchart.io/chart?c={type:&#39;bar&#39;,data:{labels:[&#39;CPU&#39;,&#39;Naive GPU&rsquo;,&lsquo;Tiled GPU&rsquo;],datasets:[{label:&lsquo;Time (ms)&rsquo;,data:[450,45,3]}]}})
+As shown above, the Tiled approach is 15x faster.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://adrianlaynez.dev/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Optimizing Matrix Multiplication in CUDA",
+      "item": "https://adrianlaynez.dev/posts/optimization-matrix/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Optimizing Matrix Multiplication in CUDA",
+  "name": "Optimizing Matrix Multiplication in CUDA",
+  "description": "The Bottleneck Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C++, we face the raw memory latency.\nThe Code Here is the naive implementation vs the tiled kernel:\n1 2 3 4 5 6 // Naive implementation __global__ void matmul_naive(float* A, float* B, float* C, int N) { int row = blockIdx.y * blockDim.y + threadIdx.y; int col = blockIdx.x * blockDim.x + threadIdx.x; // ... } Performance Analysis ![Benchmark Graph](https://quickchart.io/chart?c={type:'bar',data:{labels:['CPU','Naive GPU\u0026rsquo;,\u0026lsquo;Tiled GPU\u0026rsquo;],datasets:[{label:\u0026lsquo;Time (ms)\u0026rsquo;,data:[450,45,3]}]}}) As shown above, the Tiled approach is 15x faster.\n",
+  "keywords": [
+    "CUDA", "C++", "Performance"
+  ],
+  "articleBody": "The Bottleneck Naive matrix multiplication is $O(N^3)$. In Python, torch.matmul hides this complexity, but in C++, we face the raw memory latency.\nThe Code Here is the naive implementation vs the tiled kernel:\n1 2 3 4 5 6 // Naive implementation __global__ void matmul_naive(float* A, float* B, float* C, int N) { int row = blockIdx.y * blockDim.y + threadIdx.y; int col = blockIdx.x * blockDim.x + threadIdx.x; // ... } Performance Analysis ![Benchmark Graph](https://quickchart.io/chart?c={type:'bar',data:{labels:['CPU','Naive GPU’,‘Tiled GPU’],datasets:[{label:‘Time (ms)’,data:[450,45,3]}]}}) As shown above, the Tiled approach is 15x faster.\n",
+  "wordCount" : "88",
+  "inLanguage": "en",
+  "image":"https://adrianlaynez.dev/posts/optimization-matrix/matrix.png","datePublished": "2026-02-01T00:00:00Z",
+  "dateModified": "2026-02-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Adrian Laynez Ortiz"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adrianlaynez.dev/posts/optimization-matrix/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adrian Laynez",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://adrianlaynez.dev/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Adrian Laynez (Alt + H)">Adrian Laynez</a>
+            <a href="https://adrianlaynez.dev/" accesskey="h" title="Adrian Laynez (Alt + H)">Adrian Laynez</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -89,22 +186,22 @@ As shown above, the Tiled approach is 15x faster.">
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/posts/" title="Blog">
+                <a href="https://adrianlaynez.dev/posts/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/projects/" title="Projects">
+                <a href="https://adrianlaynez.dev/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/projects/lm-lab/" title="LM-Lab">
+                <a href="https://adrianlaynez.dev/projects/lm-lab/" title="LM-Lab">
                     <span>LM-Lab</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about-me/" title="About">
+                <a href="https://adrianlaynez.dev/about-me/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -124,7 +221,12 @@ As shown above, the Tiled approach is 15x faster.">
 </div>
   </header> 
 <figure class="entry-cover">
-            <img loading="eager" src="http://localhost:1313/posts/optimization-matrix/matrix.png" alt="Matrix Multiplication Tiling Visualization">
+            <img loading="eager"
+                srcset='https://adrianlaynez.dev/posts/optimization-matrix/matrix_hu_8fcf0f22517e9881.png 360w,https://adrianlaynez.dev/posts/optimization-matrix/matrix_hu_b3157b11e8c394aa.png 480w,https://adrianlaynez.dev/posts/optimization-matrix/matrix_hu_72eb1a96bac0644a.png 720w,https://adrianlaynez.dev/posts/optimization-matrix/matrix.png 980w'
+                src="https://adrianlaynez.dev/posts/optimization-matrix/matrix.png"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="980" height="980"
+                alt="Matrix Multiplication Tiling Visualization">
         <figcaption>Tiling strategy to reduce global memory access.</figcaption>
 </figure>
   <div class="post-content"><h2 id="the-bottleneck">The Bottleneck<a hidden class="anchor" aria-hidden="true" href="#the-bottleneck">#</a></h2>
@@ -158,16 +260,16 @@ As shown above, the Tiled approach is 15x faster.">
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/cuda/">CUDA</a></li>
-      <li><a href="http://localhost:1313/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
-      <li><a href="http://localhost:1313/tags/performance/">Performance</a></li>
+      <li><a href="https://adrianlaynez.dev/tags/cuda/">CUDA</a></li>
+      <li><a href="https://adrianlaynez.dev/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
+      <li><a href="https://adrianlaynez.dev/tags/performance/">Performance</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Adrian Laynez</a></span> · 
+        <span>&copy; 2026 <a href="https://adrianlaynez.dev/">Adrian Laynez</a></span> · 
 
     <span>
         Powered by
