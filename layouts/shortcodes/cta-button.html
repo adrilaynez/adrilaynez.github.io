@@ -1,0 +1,12 @@
+{{- $url := .Get "url" -}}
+{{- $text := .Get "text" -}}
+{{- $icon := .Get "icon" -}}
+
+<div class="cta-button-container">
+    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="cta-button">
+        {{- if $icon -}}
+        <span class="cta-icon">{{ $icon }}</span>
+        {{- end -}}
+        <span class="cta-text">{{ $text }}</span>
+    </a>
+</div>

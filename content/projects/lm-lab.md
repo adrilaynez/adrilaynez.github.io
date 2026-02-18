@@ -21,7 +21,7 @@ LM-Lab is an interactive laboratory for exploring and experimenting with languag
 
 ### Try It Now
 
-{{< streamlit-embed url="https://lm-lab.streamlit.app/" >}}
+{{< cta-button url="https://lm-lab.streamlit.app/" text="Launch LM-Lab Application" icon="🚀" >}}
 
 ### How to Use
 

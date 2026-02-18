@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Adrian Laynez</title>
-    <link>https://adrianlaynez.dev/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Adrian Laynez</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianlaynez.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Concepts</title>
-      <link>https://adrianlaynez.dev/categories/concepts/</link>
+      <link>http://localhost:1313/categories/concepts/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/categories/concepts/</guid>
+      <guid>http://localhost:1313/categories/concepts/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>https://adrianlaynez.dev/categories/engineering/</link>
+      <link>http://localhost:1313/categories/engineering/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/categories/engineering/</guid>
+      <guid>http://localhost:1313/categories/engineering/</guid>
       <description></description>
     </item>
   </channel>

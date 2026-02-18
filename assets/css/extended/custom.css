@@ -64,3 +64,43 @@
 .entry-cover img:hover {
     transform: scale(1.02);
 }
+
+/* --- STREAMLIT CTA BUTTON --- */
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--primary, #007bff); /* Fallback blue if var not defined */
+    color: white !important; /* Ensure text is white */
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: var(--secondary, #0056b3);
+}
+
+.cta-icon {
+    font-size: 1.25rem;
+}
+
+/* Dark mode adjustments if needed, though usually variables handle it */
+@media (prefers-color-scheme: dark) {
+    .cta-button {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+}

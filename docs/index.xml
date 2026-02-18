@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Adrian Laynez</title>
-    <link>https://adrianlaynez.dev/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Adrian Laynez</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianlaynez.dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LM-Lab</title>
-      <link>https://adrianlaynez.dev/projects/lm-lab/</link>
+      <link>http://localhost:1313/projects/lm-lab/</link>
       <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/projects/lm-lab/</guid>
+      <guid>http://localhost:1313/projects/lm-lab/</guid>
       <description>Interactive Language Model Laboratory</description>
     </item>
     <item>
       <title>From Turing to Transformers</title>
-      <link>https://adrianlaynez.dev/posts/turing-to-transformers/</link>
+      <link>http://localhost:1313/posts/turing-to-transformers/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/turing-to-transformers/</guid>
+      <guid>http://localhost:1313/posts/turing-to-transformers/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Machines take me by surprise with great frequency.&amp;rdquo; - Alan Turing&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -32,16 +32,16 @@
     </item>
     <item>
       <title>Hello, Attention: Building a Deep Learning Engine from Zero</title>
-      <link>https://adrianlaynez.dev/posts/hello-attention/</link>
+      <link>http://localhost:1313/posts/hello-attention/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/hello-attention/</guid>
+      <guid>http://localhost:1313/posts/hello-attention/</guid>
       <description>Why I am re-inventing the wheel by building a GPT engine in pure C++.</description>
     </item>
     <item>
       <title>Optimizing Matrix Multiplication in CUDA</title>
-      <link>https://adrianlaynez.dev/posts/optimization-matrix/</link>
+      <link>http://localhost:1313/posts/optimization-matrix/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/optimization-matrix/</guid>
+      <guid>http://localhost:1313/posts/optimization-matrix/</guid>
       <description>&lt;h2 id=&#34;the-bottleneck&#34;&gt;The Bottleneck&lt;/h2&gt;
 &lt;p&gt;Naive matrix multiplication is $O(N^3)$. In Python, &lt;code&gt;torch.matmul&lt;/code&gt; hides this complexity, but in C++, we face the raw memory latency.&lt;/p&gt;
 &lt;h3 id=&#34;the-code&#34;&gt;The Code&lt;/h3&gt;
@@ -70,9 +70,9 @@
     </item>
     <item>
       <title>About Me</title>
-      <link>https://adrianlaynez.dev/about-me/</link>
+      <link>http://localhost:1313/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/about-me/</guid>
+      <guid>http://localhost:1313/about-me/</guid>
       <description>&lt;h2 id=&#34;the-mission&#34;&gt;The Mission&lt;/h2&gt;
 &lt;p&gt;I am a double-degree student in &lt;strong&gt;Mathematics and Computer Science&lt;/strong&gt;, currently strictly focused on &lt;strong&gt;Systems Engineering&lt;/strong&gt; and &lt;strong&gt;High-Performance Computing (HPC)&lt;/strong&gt; for AI.&lt;/p&gt;
 &lt;p&gt;My philosophy is simple:&lt;/p&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Adrian Laynez</title>
-    <link>https://adrianlaynez.dev/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Adrian Laynez</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianlaynez.dev/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LM-Lab</title>
-      <link>https://adrianlaynez.dev/projects/lm-lab/</link>
+      <link>http://localhost:1313/projects/lm-lab/</link>
       <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/projects/lm-lab/</guid>
+      <guid>http://localhost:1313/projects/lm-lab/</guid>
       <description>Interactive Language Model Laboratory</description>
     </item>
   </channel>

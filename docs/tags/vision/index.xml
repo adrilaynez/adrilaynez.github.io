@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vision on Adrian Laynez</title>
-    <link>https://adrianlaynez.dev/tags/vision/</link>
+    <link>http://localhost:1313/tags/vision/</link>
     <description>Recent content in Vision on Adrian Laynez</description>
     <generator>Hugo -- 0.155.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianlaynez.dev/tags/vision/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/vision/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello, Attention: Building a Deep Learning Engine from Zero</title>
-      <link>https://adrianlaynez.dev/posts/hello-attention/</link>
+      <link>http://localhost:1313/posts/hello-attention/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://adrianlaynez.dev/posts/hello-attention/</guid>
+      <guid>http://localhost:1313/posts/hello-attention/</guid>
       <description>Why I am re-inventing the wheel by building a GPT engine in pure C++.</description>
     </item>
   </channel>
